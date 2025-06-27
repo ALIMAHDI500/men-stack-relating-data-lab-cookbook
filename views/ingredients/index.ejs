@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ingredients</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Ingredients</h1>
+    <form action="/ingredients" method="POST">
+      <input type="text" name="name">
+      <button type="submit">Add</button>
+    </form>
+    <ul>
+      <% ingredients.forEach(i => { %>
+        <li><%= i.name %></li>
+      <% }) %>
+    </ul>
+    <a href="/recipes">Back to Recipes</a>
+  </body>
+</html>

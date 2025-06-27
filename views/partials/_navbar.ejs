@@ -1,0 +1,29 @@
+
+<!-- nav part1  -->
+<nav>
+  <a href="/">Home</a>
+  <a href="/users">Explore Our Community</a> <!-- Goes to users listing -->
+  <% if(user) { %>
+    <a href="/users/<%= user._id %>/">View my Pantry</a> <!-- Goes to specific user's pantry -->
+    <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+    <a href="/auth/sign-in">Sign In</a>
+    <a href="/auth/sign-up">Sign Up</a>
+  <% } %>
+</nav>
+
+
+
+<!-- nav part2 -->
+
+<nav>
+  <a href="/">Home</a>
+  <% if(user) { %>
+    <a href="/recipes">View my Recipes</a>
+    <a href="/ingredients">Ingredients</a>
+    <a href="/auth/sign-out">Sign Out</a>
+  <% } else { %>
+    <a href="/auth/sign-in">Sign In</a>
+    <a href="/auth/sign-up">Sign Up</a>
+  <% } %>
+</nav

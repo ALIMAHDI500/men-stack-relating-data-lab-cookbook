@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Recipes</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Welcome to My Recipes</h1>
+    <a href="/recipes/new">Add New Recipe</a>
+    <ul>
+      <% if (recipes.length === 0) { %>
+        <li>You have not created any recipes yet.</li>
+      <% } else { %>
+        <% recipes.forEach(recipe => { %>
+          <li>
+            <a href="/recipes/<%= recipe._id %>"><%= recipe.name %></a>
+            <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button type="submit">Delete</button>
+            </form>
+            <a href="/recipes/<%= recipe._id %>/edit">Edit</a>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+  </body>
+</html>

@@ -1,5 +1,5 @@
 const router=require("express").Router()
-const User=require('../modles/user')
+const User=require('../models/user')
 const bcrypt=require("bcrypt")
 
 router.get('/sign-up',(req,res)=>{
@@ -26,6 +26,7 @@ router.get("/sign-in",(req,res)=>{
 
     res.render("auth/sign-in.ejs")
 })
+
 
 
 router.post("/sign-in", async (req, res) => {

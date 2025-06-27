@@ -1,4 +1,3 @@
-// controllers/foods.js
 
 const express = require('express');
 const router = express.Router();
@@ -24,34 +23,6 @@ router.get('/new', (req, res) => {
 });
 
 
-//  - GET /users/:userId/foods/new
-// router.get('/new', (req, res) => {
-//   res.render('foods/new', {
-//     userId: req.params.userId,
-//     currentUser: req.session.user
-//   });
-// });
-
-// CREATE ITEM - POST /users/:userId/foods
-// router.post('/', async (req, res) => {
-//   try {
-//     const user = await User.findById(req.params.userId);
-//     user.pantry.push({
-//       name: req.body.name,
-//   
-//     });
-//     await user.save();
-//     res.redirect(`/users/${req.params.userId}/foods`);
-//   } catch (err) {
-//     console.error(err);
-//     res.redirect('/');
-//   }
-// });
-
-// router.get('/new', async (req, res) => {
-//   const pantry = await pantry.find();
-//   res.render('foods/new.ejs', { pantry });
-// });
 
 
 

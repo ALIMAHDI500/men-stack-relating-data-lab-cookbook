@@ -3,7 +3,7 @@ const router = express.Router();
 const Recipe = require('../models/recipe.js');
 const Ingredient = require('../models/ingredient.js');
 
-// INDEX: GET /recipes (only current user's)
+// GET /recipes current user
 router.get('/', async (req, res) => {
   try {
     const recipes = await Recipe.find({ owner: req.session.user._id }).populate('ingredients');

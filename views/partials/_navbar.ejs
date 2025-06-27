@@ -2,9 +2,9 @@
 <!-- nav part1  -->
 <nav>
   <a href="/">Home</a>
-  <a href="/users">Explore Our Community</a> <!-- Goes to users listing -->
+  <a href="/users">Explore Our Community</a> 
   <% if(user) { %>
-    <a href="/users/<%= user._id %>/">View my Pantry</a> <!-- Goes to specific user's pantry -->
+    <a href="/users/<%= user._id %>/">View my Pantry</a> 
     <a href="/auth/sign-out">Sign Out</a>
   <% } else { %>
     <a href="/auth/sign-in">Sign In</a>

@@ -21,7 +21,7 @@ const foodsController = require('./controllers/foods.js');
 
 const ejs = require('ejs');
 app.engine('ejs', ejs.renderFile);
-app.set('view engine', 'ejs'); // Set EJS as the default template engine
+app.set('view engine', 'ejs');
 
 
 // Set the port from environment variable or default to 3000
@@ -63,10 +63,6 @@ app.use('/ingredients', ingredientsController);
 
 
 
-// app.get('/users', (req, res) => {
-//   res.send('This is the foods page!');
-// });
-// Route - Just for testing purpose
 
 // VIP-lounge
 

@@ -1,9 +1,6 @@
 const { default: mongoose } = require("mongoose");
 
 
-
-// user.js
-
 const foodSchema = new mongoose.Schema({
   name:{type:String,
     require:true}

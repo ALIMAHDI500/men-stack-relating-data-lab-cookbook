@@ -1,9 +1,9 @@
-//controllers/user
+
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user.js');
 
-// COMMUNITY INDEX: GET /users (Explore Our Community)
+ //GET /users Explore Our Community
 router.get('/', async (req, res) => {
   try {
     const users = await User.find().select('username profilePic');
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// USER PANTRY: GET /users/:userId/foods (View My Pantry)
+//  GET /users/:userId/foods View My Pantry
 router.get('/:userId/foods', async (req, res) => {
   try {
     const user = await User.findById(req.params.userId).populate('pantry');
@@ -32,7 +32,7 @@ router.get('/:userId/foods', async (req, res) => {
   }
 });
 
-// USER PROFILE: GET /users/:userId (User Profile Page)
+//  GET /users/:userId User Profile Page
 router.get('/:userId', async (req, res) => {
   try {
     const user = await User.findById(req.params.userId);
